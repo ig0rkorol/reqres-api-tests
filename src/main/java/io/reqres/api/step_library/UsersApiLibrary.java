@@ -1,8 +1,11 @@
 package io.reqres.api.step_library;
 
+import io.reqres.api.builders.JsonSchemaBuilder;
 import io.reqres.api.data.CreateUserRequest;
+import io.reqres.api.data.CreateUserResponse;
 import io.restassured.response.Response;
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,6 +13,9 @@ public class UsersApiLibrary extends BaseApiLibrary {
 
     private static final String USERS_PATH = "/api/users";
 
+
+    @Autowired
+    JsonSchemaBuilder jsonSchemaBuilder;
     @PostConstruct
     private void initUsersPath() {
     }
@@ -22,6 +28,8 @@ public class UsersApiLibrary extends BaseApiLibrary {
         response.prettyPrint();
     }
 
-
+    public String getJsonSchemaPath(){
+        return "jsonschema/CreateUserResponseSchema.json";
+    }
 
 }

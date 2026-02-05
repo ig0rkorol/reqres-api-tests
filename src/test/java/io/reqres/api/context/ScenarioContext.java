@@ -1,26 +1,17 @@
 package io.reqres.api.context;
 
 import io.restassured.response.Response;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 @Component
+@Data
+@ToString
+@Getter @Setter
 public class ScenarioContext {
     private Response lastResponse;
-    private String createdUserId; // можна додавати будь-які інші дані
-
-    public Response getLastResponse() {
-        return lastResponse;
-    }
-
-    public void setLastResponse(Response lastResponse) {
-        this.lastResponse = lastResponse;
-    }
-
-    public String getCreatedUserId() {
-        return createdUserId;
-    }
-
-    public void setCreatedUserId(String createdUserId) {
-        this.createdUserId = createdUserId;
-    }
+    private String jsonSchemaPath;
 }

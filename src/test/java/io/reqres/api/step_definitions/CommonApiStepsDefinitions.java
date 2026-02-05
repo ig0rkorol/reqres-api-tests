@@ -3,17 +3,28 @@ package io.reqres.api.step_definitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.reqres.api.context.ScenarioContext;
+import io.restassured.response.Response;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Log4j2
 public class CommonApiStepsDefinitions {
 
     @Autowired
     ScenarioContext scenarioContext;
     @And("response match JSON schema")
     public void responseMatchJsonSchema() {
-//        request = new CreateUserRequest("Igor", "QA Engineer");
+        Response response = scenarioContext.getLastResponse();
+        String schemaExpectedPath = scenarioContext.getJsonSchemaPath();
+        assertThat(
+                response.getBody().asString(),
+                matchesJsonSchemaInClasspath(schemaExpectedPath)
+        );
     }
 
     @Then("the response code should be {int}")

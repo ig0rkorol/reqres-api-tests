@@ -20,6 +20,7 @@ public class UsersApiStepsDefinitions {
     @Given("correct user data provided")
     public void correctUserDataProvided() {
         request = new CreateUserRequest("Igor", "QA Engineer");
+        scenarioContext.setJsonSchemaPath(usersApiLibrary.getJsonSchemaPath());
     }
 
     @When("POST request is executed via Users endpoint")
