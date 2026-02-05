@@ -1,18 +1,19 @@
-package io.reqres.api.testdata;
+package io.reqres.api.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@PropertySource("classpath:testdata.properties")
 @ConfigurationProperties(prefix = "api")
-public class TestDataProperties {
+public class ConfigProperties {
 
-    @Value("${user.exist.id}")
-    private String userExistId;
+    @Value("${base.url}")
+    private String baseUrl;
+
+    @Value("${x.api.key}")
+    private String xApiKey;
 
 }

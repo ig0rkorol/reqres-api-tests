@@ -23,6 +23,12 @@ public class CreateUsersApiStepsDefinitions {
         scenarioContext.setJsonSchemaPath(createUsersApiLibrary.getJsonSchemaPath());
     }
 
+    @Given("invalid user data provided")
+    public void invalidUserDataProvided() {
+        request = new CreateUserRequest(null, "fake");
+        scenarioContext.setJsonSchemaPath(createUsersApiLibrary.getJsonSchemaPath());
+    }
+
     @When("POST request is executed via Users endpoint")
     public void postRequestExecuted() {
         createUsersApiLibrary.createUser(request);

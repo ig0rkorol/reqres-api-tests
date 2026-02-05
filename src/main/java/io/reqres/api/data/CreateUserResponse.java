@@ -6,15 +6,10 @@ import lombok.Data;
 @Data
 public class CreateUserResponse {
 
-//    @JsonProperty(value = "name", required = true)
     private String name;
-//    @JsonProperty(value = "job", required = true)
     private String job;
-//    @JsonProperty(value = "id", required = true)
     private String id;
-//    @JsonProperty(value = "createdAt", required = true)
     private String createdAt;
-//    @JsonProperty(value = "_meta", required = true)
     private Meta _meta;
 
     @Data

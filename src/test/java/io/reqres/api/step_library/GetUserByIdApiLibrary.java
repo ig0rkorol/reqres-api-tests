@@ -1,7 +1,6 @@
 package io.reqres.api.step_library;
 
 import io.reqres.api.builders.JsonSchemaBuilder;
-import io.reqres.api.data.CreateUserRequest;
 import io.restassured.response.Response;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,7 @@
-package io.reqres.api.step_definitions;
+package io.reqres.api.config;
 
 import io.cucumber.spring.CucumberContextConfiguration;
+import io.reqres.api.config.SpringConfig;
 import org.springframework.test.context.ContextConfiguration;
 
 @CucumberContextConfiguration

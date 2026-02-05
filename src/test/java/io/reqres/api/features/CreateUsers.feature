@@ -7,5 +7,12 @@ Feature: Create User API functionality
     Then the response code should be 201
     And response match JSON schema
 
+  @sanity22
+  Scenario: Add user invalid data
+    Given invalid user data provided
+    When POST request is executed via Users endpoint
+    Then the response code should be 201
+    And response match JSON schema
+
 
 
