@@ -3,6 +3,10 @@
 ## Project Name : reqres-api-tests
 
 ### 1. Project Structure
+
+## Tech Stack
+🌱 Spring | 🥒 Cucumber | 📦 Maven
+
 Project build with Spring, Cucumber and JUnit5 frameworks
 
 Test data and run configuration depends on environment to run
