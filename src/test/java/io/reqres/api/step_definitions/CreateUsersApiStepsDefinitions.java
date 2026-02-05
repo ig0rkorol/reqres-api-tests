@@ -4,14 +4,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.reqres.api.context.ScenarioContext;
 import io.reqres.api.data.CreateUserRequest;
-import io.reqres.api.step_library.UsersApiLibrary;
+import io.reqres.api.step_library.CreateUsersApiLibrary;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Log4j2
-public class UsersApiStepsDefinitions {
+public class CreateUsersApiStepsDefinitions {
     @Autowired
-    private UsersApiLibrary usersApiLibrary;
+    private CreateUsersApiLibrary createUsersApiLibrary;
     @Autowired
     ScenarioContext scenarioContext;
 
@@ -20,13 +20,13 @@ public class UsersApiStepsDefinitions {
     @Given("correct user data provided")
     public void correctUserDataProvided() {
         request = new CreateUserRequest("Igor", "QA Engineer");
-        scenarioContext.setJsonSchemaPath(usersApiLibrary.getJsonSchemaPath());
+        scenarioContext.setJsonSchemaPath(createUsersApiLibrary.getJsonSchemaPath());
     }
 
     @When("POST request is executed via Users endpoint")
     public void postRequestExecuted() {
-        usersApiLibrary.createUser(request);
-        scenarioContext.setLastResponse(usersApiLibrary.getResponse());
+        createUsersApiLibrary.createUser(request);
+        scenarioContext.setLastResponse(createUsersApiLibrary.getResponse());
     }
 
 

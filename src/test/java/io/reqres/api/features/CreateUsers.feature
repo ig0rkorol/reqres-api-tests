@@ -1,4 +1,4 @@
-Feature: Users API functionality
+Feature: Create User API functionality
 
   @sanity
   Scenario: Add user valid data
