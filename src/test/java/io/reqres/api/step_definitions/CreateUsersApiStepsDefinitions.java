@@ -23,11 +23,6 @@ public class CreateUsersApiStepsDefinitions {
         scenarioContext.setJsonSchemaPath(createUsersApiLibrary.getJsonSchemaPath());
     }
 
-    @Given("invalid user data provided")
-    public void invalidUserDataProvided() {
-        request = new CreateUserRequest(null, "fake");
-        scenarioContext.setJsonSchemaPath(createUsersApiLibrary.getJsonSchemaPath());
-    }
 
     @When("POST request is executed via Users endpoint")
     public void postRequestExecuted() {
@@ -35,6 +30,10 @@ public class CreateUsersApiStepsDefinitions {
         scenarioContext.setLastResponse(createUsersApiLibrary.getResponse());
     }
 
-
+    @When("POST request is executed with incorrect json user data provided")
+    public void postRequestExecutedWithIncorrectData() {
+        createUsersApiLibrary.createUserWithoutBodyRequest();
+        scenarioContext.setLastResponse(createUsersApiLibrary.getResponse());
+    }
 
 }

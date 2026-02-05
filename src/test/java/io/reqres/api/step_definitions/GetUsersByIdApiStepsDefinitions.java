@@ -25,7 +25,10 @@ public class GetUsersByIdApiStepsDefinitions {
         id = testDataProperties.getUserExistId();
         scenarioContext.setJsonSchemaPath(getUserByIdApiLibrary.getJsonSchemaPath());
     }
-
+    @Given("not existing user id provided")
+    public void notExistingUserIdProvided() {
+        id = testDataProperties.getUserIdNotExist();
+    }
     @When("GET request is executed via Retrieve User by Id endpoint")
     public void getUserByIdRequestExecuted() {
         getUserByIdApiLibrary.getUserById(id);

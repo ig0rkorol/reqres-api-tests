@@ -13,4 +13,6 @@ public class TestDataProperties {
     @Value("${user.exist.id}")
     private String userExistId;
 
+    @Value("${userid.not.exist}")
+    private String userIdNotExist;
 }

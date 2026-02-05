@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  clone-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          repository: igoruser/reqres-api-tests
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Run tests
+        run: |
+          mvn clean test

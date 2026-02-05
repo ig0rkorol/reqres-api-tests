@@ -7,6 +7,8 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 @Component
 public class CreateUsersApiLibrary extends BaseApiLibrary {
 
@@ -21,8 +23,9 @@ public class CreateUsersApiLibrary extends BaseApiLibrary {
 
     public void createUser(CreateUserRequest request) {
         Response response = requestSpec
-                .body(request)
-                .post(USERS_PATH);
+                            .body(request)
+                            .post(USERS_PATH);
+
         setResponse(response);
         response.prettyPrint();
     }
@@ -31,4 +34,9 @@ public class CreateUsersApiLibrary extends BaseApiLibrary {
         return "jsonschema/CreateUserResponseSchema.json";
     }
 
+    public void createUserWithoutBodyRequest() {
+        Response response = requestSpec.body("fake json data").post(USERS_PATH);
+        setResponse(response);
+        response.prettyPrint();
+    }
 }
