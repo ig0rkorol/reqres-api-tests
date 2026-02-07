@@ -1,6 +1,6 @@
 package io.reqres.api.builders;
+
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.victools.jsonschema.generator.*;
 import com.github.victools.jsonschema.module.jackson.JacksonModule;
 import com.github.victools.jsonschema.module.jakarta.validation.JakartaValidationModule;
@@ -16,25 +16,6 @@ import static com.github.victools.jsonschema.module.jakarta.validation.JakartaVa
 
 @Component
 public class JsonSchemaBuilder {
-
-//    public static String buildJSONSchema(Class clazz) {
-//        try {
-//            ObjectMapper objectMapper = new ObjectMapper();
-//
-//            SchemaGeneratorConfigBuilder configBuilder =
-//                    new SchemaGeneratorConfigBuilder(objectMapper, SchemaVersion.DRAFT_7, OptionPreset.PLAIN_JSON);
-//
-//            SchemaGenerator generator = new SchemaGenerator(configBuilder.build());
-//
-//            com.fasterxml.jackson.databind.JsonNode jsonSchema = generator.generateSchema(clazz);
-//
-//            return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonSchema);
-//
-//        } catch (Exception e) {
-//            throw new RuntimeException("Failed to generate JSON schema for class " + clazz.getSimpleName(), e);
-//        }
-//    }
-
     public String buildJSONSchema(Class clazz) {
         JacksonModule jacksonModule = new JacksonModule(RESPECT_JSONPROPERTY_REQUIRED, RESPECT_JSONPROPERTY_ORDER);
         JakartaValidationModule jakartaValidationModule = new JakartaValidationModule(NOT_NULLABLE_FIELD_IS_REQUIRED, INCLUDE_PATTERN_EXPRESSIONS);

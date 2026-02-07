@@ -70,9 +70,12 @@ mvn clean test
 mvn allure:report
 mvn allure:serve
 ```
+Find report at path from project root and open in browser: 
+```target/site/index.html```
+
 ### Generate Report with Allure command line tool
 
-```allure serve``` 
+```allure serve target/allure-results``` 
 
 It will automatically open HTML report in browser
 
