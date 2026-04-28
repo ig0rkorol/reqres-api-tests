@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"a4cfc1379f70fbf06d3b07a2f3a932b4","name":"Create User API functionality","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}},{"uid":"c5cedd19826dbfb5c45efefb8121161d","name":"Retrieve User by Id API functionality","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
