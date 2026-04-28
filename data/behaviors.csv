@@ -1,5 +1,5 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
-"0","ReqRes API Automation Testing","0","Create User API functionality","1","0","Add user use invalid data","0"
 "0","ReqRes API Automation Testing","0","Retrieve User by Id API functionality","1","0","Retrieve existing user provide valid Id","0"
 "0","ReqRes API Automation Testing","0","Retrieve User by Id API functionality","1","0","Retrieve user provide not existing Id","0"
 "0","ReqRes API Automation Testing","0","Create User API functionality","1","0","Add user valid data","0"
+"0","ReqRes API Automation Testing","0","Create User API functionality","1","0","Add user use invalid data","0"
