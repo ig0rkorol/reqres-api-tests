@@ -2,6 +2,9 @@
 ## API Automation Framework
 ## Project Name : reqres-api-tests
 
+[![CI](https://github.com/ig0rkorol/reqres-api-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/ig0rkorol/reqres-api-tests/actions/workflows/ci.yml)
+[![Allure Report](https://img.shields.io/badge/Allure-Report-brightgreen?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6TTIgMTdsOSA1IDktNVYxMmwtOSA1LTktNXoiLz48L3N2Zz4=)](https://ig0rkorol.github.io/reqres-api-tests/)
+
 ### 1. Project Structure
 
 ## Tech Stack
